@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <!-- MENU ENCABEZADO -->
+    <div class="contenedor-header">
+        <header>
+            <div class="logo">
+                <a href="#">Gamiz</a>
+            </div>
+            <nav id="nav">
+                <ul>
+                    <li><a href="#inicio" onclick="seleccionar()">INICIO</a></li>
+                    <li><a href="#sobremi" onclick="seleccionar()">SOBRE MI</a></li>
+                    <li><a href="#skills" onclick="seleccionar()">SKILLS</a></li>
+                    <li><a href="#curriculum" onclick="seleccionar()">CURRICULUM</a></li>
+                    <li><a href="#portfolio" onclick="seleccionar()">PORTFOLIO</a></li>
+                    <li><a href="#contacto" onclick="seleccionar()">CONTACTO</a></li>
+                </ul>
+            </nav>
+            <div class="nav-responsive" onclick="mostrarOcultarMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </header>
+    </div>
+
+    <!-- SECCION INICIO -->
+    <section id="inicio" class="inicio">
+        <div class="contenido-banner">
+            <div class="contenedor-img">
+                <img src="img/hero.png" alt="">
+            </div>
+            <h1>Manuel Gamiz</h1>
+            <h2>Desarrollador de Software - Mobile - Web  </h2>
+            <div class="redes">
+                <a href="www.linkedin.com/in/manuel-gamiz-rey-677617122"><i class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCION SOBRE MI -->
+    <section id="sobremi" class="sobremi">
+        <div class="contenido-seccion">
+            <h2>Sobre Mí</h2>
+            <p><span>Hola, soy Manuel gamiz.</span> Desde pequeño, siempre he sentido una profunda inquietud por las
+                tecnologías y la informática. Soy Desarrollador Web y multiplataforma con
+                formación en Desarrollo de Aplicaciones tanto web como multiplataforma.
+                Me considero una persona motivada, creativa, proactiva y siempre
+                dispuesta a aprender y mejorar. Aspiro a desarrollarme tanto personal
+                como profesionalmente en el sector tecnológico.</p>
+
+            <div class="fila">
+                <!-- datos personales -->
+                <div class="col">
+                    <h3>Datos Personales</h3>
+                    <ul>
+                        <li>
+                            <strong>Cumpleaños</strong>
+                            10-01-1999
+                        </li>
+                        <li>
+                            <strong>Teléfono</strong>
+                            +34 689235949
+                        </li>
+                        <li>
+                            <strong>Email</strong>
+                            mangamrey@gmail.com
+                        </li>
+                        <li>
+                            <strong>Website</strong>
+                            www.example.com
+                        </li>
+                        <li>
+                            <strong>Dirección</strong>
+                                Sevilla
+                        </li>
+                        <li>
+                            <strong>Cargo</strong>
+                            <span>Desarrollador</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- intereses -->
+                <div class="col">
+                    <h3>Intereses</h3>
+                    <div class="contenedor-intereses">
+                        <div class="interes">
+                            <i class="fa-solid fa-gamepad"></i>
+                            <span>JUEGOS</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-headphones"></i>
+                            <span>MUSICA</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-plane"></i>
+                            <span>VIAJAR</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-brands fa-apple"></i>
+                            <span>MAC OS</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-film"></i>
+                            <span>CINE</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-brands fa-linux"></i></i>
+                            <span>LINUX</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-brands fa-android"></i>
+                            <span>ANDROID</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-brands fa-windows"></i>
+                            <span>WINDOWS</span>
+                        </div>
+
+                        
+                    </div>
+                </div>
+            </div>
+            <button onclick="window.location.href='https://drive.google.com/uc?export=download&id=1FHmk4B21WeWgaGc8rEfkyxxmdrILHAm2'">
+                Descargar CV <i class="fa-solid fa-download"></i>
+                <span class="overlay"></span>
+            </button>
+        </div>
+    </section>
+
+    <!-- SECCION SKILLS -->
+    <section class="skills" id="skills">
+        <div class="contenido-seccion">
+            <h2>Skills</h2>
+            <div class="fila">
+                <!-- Technical Skill -->
+                <div class="col">
+                    <h3 class="colortxt">Technical Skills</h3>
+                    <div class="skill">
+                        <span>Javascript</span>
+                        <div>
+                            <div class="colortxt">
+                                <span>Avanzado</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill" >
+                        <span>HTML & CSS</span>
+                        <div>
+                            <div class="colortxt">
+                                <span>Avanzado</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Java</span>
+                        
+                        <div>
+                            <div class="colortxt">
+                                <span>Avanzado</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Python</span>
+                        <div>
+                            <div class="colortxt">
+                                <span>Medio</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="skill">
+                        <span>Drupa</span>
+                        <div >
+                            <div class="colortxt">
+                                <span>55%</span>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+                <!-- Professional Skills -->
+                <div class="col">
+                    <h3 class="colortxt">Professional Skills</h3>
+                    <div class="skill">
+                        <span>Comunicación</span>
+                        <div >
+                            <div class="colortxt">
+                                <span>Medio - Alto</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Trabajo en Equipo</span>
+                        <div >
+                            <div class="colortxt">
+                                <span>Alto</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Creatividad</span>
+                        <div >
+                            <div class="colortxt">
+                                <span>Medio</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Dedicación</span>
+                        <div >
+                            <div class="colortxt">
+                                <span>Alto</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Resolutivo</span>
+                        <div >
+                            <div class="colortxt">
+                                <span>Alto</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCION CURRICULUM -->
+    <section id="curriculum" class="curriculum">
+        <div class="contenido-seccion">
+            <h2>Curriculum</h2>
+            <div class="fila">
+                <div class="col izquierda">
+                    <h3>Educación</h3>
+                    <div class="item izq">
+                        <h4> Desarrollo de Aplicaciones Multiplataforma</h4>
+                        <span class="casa">Grupo Studium Sevilla</span>
+                        <span class="fecha">2023 - 2024</span>
+                        <div class="conectori">
+                            <div class="circuloi"></div>
+                        </div>
+                    </div>
+                    <div class="item izq">
+                        <h4>Desarrollo de Aplicaciones Web</h4>
+                        <span class="casa">EUSA</span>
+                        <span class="fecha">2021 - 2023</span>
+                        <div class="conectori">
+                            <div class="circuloi"></div>
+                        </div>
+                    </div>
+                    <div class="item izq">
+                        <h4>Sistemas Microinformaticos y Redes</h4>
+                        <span class="casa">AXATI</span>
+                        <span class="fecha">2018-2020</span>
+                        <div class="conectori">
+                            <div class="circuloi"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col derecha">
+                    <h3>Experiencia de trabajo</h3>
+                    <div class="item der">
+                        <h4>Desarrollador software  RPA</h4>
+                        <span class="casa">Servinform</span>
+                        <span class="fecha">Marzo 2024 - JUNIO 2024</span>
+                        <p>Administración y programación de Automatización y Robotización de Procesos (RPA) con UiPath.
+                            Pruebas y resolución de problemas para asegurar el correcto funcionamiento de las automatizaciones.</p>
+                        <div class="conectord">
+                            <div class="circulod"></div>
+                        </div>
+                    </div>
+                    <div class="item der">
+                        <h4>Desarrollador web Full stack</h4>
+                        <span class="casa">Acrono</span>
+                        <span class="fecha">MARZO 2023 - JUNIO 2023</span>
+                        <p>Diseño y desarrollo de plantillas PDF dinámicas y personalizadas para la generación automática de documentos.
+                            Implementación de algoritmos en PHP para la integración de datos en las plantillas PDF.</p>
+                        <div class="conectord">
+                            <div class="circulod"></div>
+                        </div>
+                    </div>
+                    <div class="item der">
+                        <h4>Técnico en Sistemas Microinformaticos y Redes</h4>
+                        <span class="casa">Tecno Axati</span>
+                        <span class="fecha">MARZO 2020 - JUNIO 2020</span>
+                        <p>Reparación de equipos informáticos.
+                            Instalación y configuración de sistemas operativos y software. Presupuestado de equipos y asesoramiento</p>
+                        <div class="conectord">
+                            <div class="circulod"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCION PORTFOLIO -->
+    <section id="portfolio" class="portfolio">
+        <div class="contenido-seccion">
+            <h2>PORTFOLIO</h2>
+            <div class="galeria">
+                <div class="proyecto">
+                    <img src="img/p1.png" alt="">
+                    <div class="overlay"  onclick="window.location.href='#'">
+                        <h3>Diseño WEB</h3>
+                        <p>Portfolio</p>
+                    </div>
+                </div>
+                <div class="proyecto">
+                    <img src="img/p2.jpg" alt="">
+                    <div class="overlay">
+                        <h3>Diseño Creativo</h3>
+                        <p>Fotografía</p>
+                    </div>
+                </div>
+                <div class="proyecto">
+                    <img src="img/p3.jpg" alt="">
+                    <div class="overlay">
+                        <h3>Diseño Creativo</h3>
+                        <p>Fotografía</p>
+                    </div>
+                </div>
+                <div class="proyecto">
+                    <img src="img/p4.jpg" alt="">
+                    <div class="overlay">
+                        <h3>Diseño Creativo</h3>
+                        <p>Fotografía</p>
+                    </div>
+                </div>
+                <div class="proyecto">
+                    <img src="img/p5.jpg" alt="">
+                    <div class="overlay">
+                        <h3>Diseño Creativo</h3>
+                        <p>Fotografía</p>
+                    </div>
+                </div>
+                <div class="proyecto">
+                    <img src="img/p6.jpg" alt="">
+                    <div class="overlay">
+                        <h3>Diseño Creativo</h3>
+                        <p>Fotografía</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCION CONTACTO -->
+    <form id="form" class="contacto">
+        <div class="contenido-seccion">
+            <h2>CONTACTO</h2>
+            <div class="fila">
+                <!-- Formulario -->
+                <div class="col" id="contacto">
+                    <input type="text" name="nombre" id="nombre" placeholder="Tú Nombre">
+                    <input type="text" name="numero_Telefonico" id="numero_Telefonico" placeholder="Número telefónico">
+                    <input type="text" name="email_id" id="email_id"  placeholder="Dirección de correo">
+                    <input type="text" name="Tema" id="Tema" placeholder="Tema">
+                    <textarea name="message" id="message" id="" cols="30" rows="10" placeholder="Mensaje"></textarea>
+                    <button  type="submit" id="buttonContacto" value="Send Email">
+                        
+                         Enviar Mensaje<i class="fa-solid fa-paper-plane"></i> 
+                        <span class="overlay"></span>
+                    </button>
+                </div>
+                
+            </div>
+        </div>
+    </form>
+    <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  
+  <script type="text/javascript">
+    emailjs.init('z88A8f4eU_yyYKDTc')
+  </script>
+    <!-- footer -->
+    <footer>
+        <a href="#inicio" class="arriba">
+            <i class="fa-solid fa-angles-up"></i>
+        </a>
+        <div class="redes">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-skype"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#"><i class="fa-solid fa-rss"></i></a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
