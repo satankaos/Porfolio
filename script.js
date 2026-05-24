@@ -17,45 +17,41 @@ function seleccionar(){
 }
 
 // ENVIO DE MENSAJE
-const btn = document.getElementById('buttonContacto');
+const form = document.getElementById('form');
+const submitBtn = form.querySelector('button[type="submit"]');
 
-document.getElementById('contacto')
- .addEventListener('submit', function(event) {
-   event.preventDefault();
+form.addEventListener('submit', async (e) => {
+    e.preventDefault();
 
-   // Cambiar el texto del botón a "Enviando..."
-   btn.innerHTML = 'Enviando... <i class="fa-solid fa-paper-plane"></i><span class="overlay"></span>';
+    const formData = new FormData(form);
+    formData.append("access_key", "a877051a-e2a3-4a1e-aca5-a800cea4ea5f");
 
-   const formData = new FormData(this);
-   const object = Object.fromEntries(formData);
-   const json = JSON.stringify(object);
+    const originalText = submitBtn.innerHTML;
 
-   fetch('https://api.web3forms.com/submit', {
-      method: 'POST',
-      headers: {
-         'Content-Type': 'application/json',
-         'Accept': 'application/json'
-      },
-      body: json
-   })
-   .then(async (response) => {
-      let result = await response.json();
-      if (response.status === 200) {
-         alert('¡Mensaje enviado con éxito! Te contactaremos pronto.');
-         this.reset();
-      } else {
-         console.log(result);
-         alert('Error al enviar el mensaje: ' + result.message);
-      }
-   })
-   .catch(error => {
-      console.log(error);
-      alert('Hubo un error de conexión al enviar el mensaje.');
-   })
-   .then(() => {
-      // Restaurar el texto del botón
-      btn.innerHTML = 'Enviar Mensaje <i class="fa-solid fa-paper-plane"></i><span class="overlay"></span>';
-   });
+    submitBtn.innerHTML = 'Enviando... <i class="fa-solid fa-paper-plane"></i><span class="overlay"></span>';
+    submitBtn.disabled = true;
+
+    try {
+        const response = await fetch("https://api.web3forms.com/submit", {
+            method: "POST",
+            body: formData
+        });
+
+        const data = await response.json();
+
+        if (response.ok) {
+            alert("¡Mensaje enviado con éxito! Te contactaremos pronto.");
+            form.reset();
+        } else {
+            alert("Error: " + data.message);
+        }
+
+    } catch (error) {
+        alert("Algo salió mal. Por favor, inténtalo de nuevo.");
+    } finally {
+        submitBtn.innerHTML = originalText;
+        submitBtn.disabled = false;
+    }
 });
 
 
