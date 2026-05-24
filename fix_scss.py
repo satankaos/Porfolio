@@ -1,8 +1,8 @@
 import os
 import re
 
-scss_path = 'c:/Users/puebl/Documents/GitHub/Porfolio/estilo.scss'
-css_path = 'c:/Users/puebl/Documents/GitHub/Porfolio/estilo.css'
+scss_path = 'estilo.scss'
+css_path = 'estilo.css'
 
 with open(css_path, 'r', encoding='utf-8') as f:
     css_lines = f.readlines()

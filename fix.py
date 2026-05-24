@@ -1,7 +1,7 @@
 import os
 
-css_file = r'c:\Users\puebl\Documents\GitHub\Porfolio\estilo.css'
-scss_file = r'c:\Users\puebl\Documents\GitHub\Porfolio\estilo.scss'
+css_file = 'estilo.css'
+scss_file = 'estilo.scss'
 
 with open(css_file, 'r', encoding='utf-8') as f:
     content = f.read()
