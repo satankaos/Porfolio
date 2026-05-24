@@ -1010,3 +1010,20 @@ button {
         font-size: 32px !important;
     }
 }
+
+/* EFECTO CENSURA UI/UX */
+.sobremi .fila .col ul li span.censored-text,
+.censored-text {
+    color: transparent !important;
+    text-shadow: 0 0 8px rgba(255,255,255,0.7);
+    user-select: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.sobremi .fila .col ul li span.censored-text:hover,
+.censored-text:hover {
+    color: #fff !important;
+    text-shadow: none;
+    user-select: text;
+}
