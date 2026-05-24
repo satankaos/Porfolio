@@ -365,17 +365,17 @@
     </section>
 
     <!-- SECCION CONTACTO -->
-    <form id="form" class="contacto" data-aos="fade-up">
+    <form id="contacto" class="contacto" data-aos="fade-up">
         <div class="contenido-seccion">
             <h2>CONTACTO</h2>
             <div class="fila">
                 <!-- Formulario -->
-                <div class="col" id="contacto">
+                <div class="col">
                     <input type="text" name="nombre" id="nombre" placeholder="Tú Nombre">
                     <input type="text" name="numero_Telefonico" id="numero_Telefonico" placeholder="Número telefónico">
                     <input type="text" name="email_id" id="email_id" placeholder="Dirección de correo">
                     <input type="text" name="Tema" id="Tema" placeholder="Tema">
-                    <textarea name="message" id="message" id="" cols="30" rows="10" placeholder="Mensaje"></textarea>
+                    <textarea name="message" id="message" cols="30" rows="10" placeholder="Mensaje"></textarea>
                     <button type="submit" id="buttonContacto" value="Send Email">
 
                         Enviar Mensaje<i class="fa-solid fa-paper-plane"></i>
@@ -389,7 +389,9 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
     <script type="text/javascript">
-        emailjs.init('z88A8f4eU_yyYKDTc')
+        emailjs.init({
+            publicKey: 'z88A8f4eU_yyYKDTc'
+        });
     </script>
     <!-- footer
     <footer>

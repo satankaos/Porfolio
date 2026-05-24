@@ -19,23 +19,23 @@ function seleccionar(){
 // ENVIO DE MENSAJE
 const btn = document.getElementById('buttonContacto');
 
-document.getElementById('form')
+document.getElementById('contacto')
  .addEventListener('submit', function(event) {
    event.preventDefault();
 
-   btn.value = 'Sending...';
+   btn.innerHTML = 'Enviando... <i class="fa-solid fa-paper-plane"></i><span class="overlay"></span>';
 
    const serviceID = 'default_service';
    const templateID = 'template_4yueeel';
 
    emailjs.sendForm(serviceID, templateID, this)
     .then(() => {
-      btn.value = 'Send Email';
-      alert('Sent!');
-      location.reload();
+      btn.innerHTML = 'Enviar Mensaje <i class="fa-solid fa-paper-plane"></i><span class="overlay"></span>';
+      alert('¡Mensaje enviado con éxito!');
+      this.reset();
     }, (err) => {
-      btn.value = 'Send Email';
-      alert(JSON.stringify(err));
+      btn.innerHTML = 'Enviar Mensaje <i class="fa-solid fa-paper-plane"></i><span class="overlay"></span>';
+      alert('Hubo un error al enviar el mensaje: ' + JSON.stringify(err));
     });
 });
 
