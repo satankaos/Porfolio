@@ -1,3 +1,15 @@
+// VARIABLES DE COLOR Y FUENTES
+$color-primario: #ad2debcc;
+$color-hover: rgba(173, 45, 235, 0.4);
+$color-overlay: rgba(173, 45, 235, 0.8);
+$bg-main: #1e2326;
+$bg-light: #252A2E;
+$text-light: #fff;
+$text-dim: #e0e0e0;
+$text-color: #333;
+$font-main: "Work Sans", sans-serif;
+$font-title: "Righteous", cursive;
+
 @import url('https://fonts.googleapis.com/css2?family=Righteous&family=Work+Sans:wght@100;300;400;600;800&display=swap');
 *{
     box-sizing: border-box;
@@ -10,13 +22,13 @@ html{
     scroll-behavior: smooth;
 }
 body {
-    background-color: #1e2326;
-    color: #fff;
+    background-color: $bg-main;
+    color: $text-light;
     overflow-x: hidden;
 }
 /* MENU */
 .contenedor-header{
-    background: #1e2326;
+    background: $bg-main;
     position: fixed;
     width: 100%;
     top: 0;
@@ -34,7 +46,7 @@ body {
 .contenedor-header header .logo a{
     font-family: 'Righteous';
     font-size: 36px;
-    color: #ad2debcc;
+    color: $color-primario;
     text-decoration: none;
 }
 .contenedor-header header ul{
@@ -43,18 +55,18 @@ body {
 }
 .contenedor-header header nav ul li a{
     text-align: none;
-    color: #fff;
+    color: $text-light;
     margin: 0 15px;
     padding: 3px;
     transition: .5s;
     text-decoration: none;
 }
 .contenedor-header header nav ul li a:hover{
-    color: #ad2debcc;
+    color: $color-primario;
 }
 .nav-responsive{
-    background-color: #ad2debcc;
-    color:#fff;
+    background-color: $color-primario;
+    color:$text-light;
     padding: 5px 10px;
     border-radius: 5px;
     cursor: pointer;
@@ -66,13 +78,13 @@ body {
     url(img/fondo.jpg);
     background-size: cover;
     height: 100vh;
-    color: #fff;
+    color: $text-light;
     display: flex;
     align-items: center;
 }
 .inicio .contenido-banner{
     padding: 20px;
-    background-color: #1e2326;
+    background-color: $bg-main;
     max-width: 350px;
     margin: auto;
     text-align: center;
@@ -80,7 +92,7 @@ body {
 }
 .inicio .contenido-banner img{
     margin-top: 40px;
-    border: 10px solid #ad2debcc;
+    border: 10px solid $color-primario;
     display: block;
     width: 80%;
     margin: auto;
@@ -96,10 +108,10 @@ body {
     font-weight: normal;
 }
 .inicio .contenido-banner .redes a{
-    color: #fff;
+    color: $text-light;
     display: inline-block;
     text-decoration: none;
-    border: 1px solid #fff;
+    border: 1px solid $text-light;
     border-radius: 100%;
     width: 42px;
     height: 42px;
@@ -109,11 +121,11 @@ body {
     transition: .3s;
 }
 .inicio .contenido-banner .redes a:hover{
-    background-color: #ad2debcc;
+    background-color: $color-primario;
 }
 .sobremi{
-    background-color: #1e2326;
-    color: #fff;
+    background-color: $bg-main;
+    color: $text-light;
     padding: 50px 20px;
 }
 .sobremi .contenido-seccion {
@@ -133,7 +145,7 @@ body {
     margin-bottom: 20px;
 }
 .sobremi .contenido-seccion p span{
-    color: #ad2debcc;
+    color: $color-primario;
     font-weight: bold;
 }
 .sobremi .fila{
@@ -156,11 +168,11 @@ body {
 }
 .sobremi .fila .col ul li strong{
     display: inline-block;
-    color: #ad2debcc;
+    color: $color-primario;
     width: 130px;
 }
 .sobremi .fila .col ul li span{
-    background-color: #ad2debcc;
+    background-color: $color-primario;
     padding: 3px;
     font-weight: bold;
     border-radius: 5px;
@@ -172,7 +184,7 @@ body {
 .sobremi .fila .col .contenedor-intereses .interes{
     width: 100px;
     height: 100px;
-    background-color: #252A2E;
+    background-color: $bg-light;
     border-radius: 10px;
     margin: 0 15px 15px 0;
     display: flex;
@@ -181,7 +193,7 @@ body {
     justify-content: center;
     transition: .3s;
 }.sobremi .fila .col .contenedor-intereses .interes:hover{
-    background-color: #ad2debcc;
+    background-color: $color-primario;
 }
 .sobremi .fila .col .contenedor-intereses .interes i{
     font-size: 30px;
@@ -190,13 +202,13 @@ body {
 .sobremi button{
     cursor: pointer;
     background-color: transparent;
-    border: 2px solid #fff;
+    border: 2px solid $text-light;
     width: fit-content;
     display: block;
     margin: 20px auto;
     padding: 10px 22px;
     font-size: 16px;
-    color: #fff;
+    color: $text-light;
     position: relative;
     z-index: 10;
 }
@@ -206,7 +218,7 @@ body {
     left: 0;
     width: 0;
     height: 100%;
-    background-color: #ad2debcc;
+    background-color: $color-primario;
     z-index: -1;
     transition: 1s;
 }
@@ -215,8 +227,8 @@ body {
 }
 /* SECCION S K I L L S */
 .skills{
-    background-color: #252A2E;
-    color: #fff;
+    background-color: $bg-light;
+    color: $text-light;
     padding: 50px 20px;
 }
 .skills .contenido-seccion{
@@ -255,7 +267,7 @@ body {
     margin-bottom: 30px;
 }
 .skills .skill .progreso{
-    background-color: #ad2debcc;
+    background-color: $color-primario;
     position: absolute;
     top: 0;
     left: 0;
@@ -265,7 +277,7 @@ body {
     position: absolute;
     height: 40px;
     width: 40px;
-    background-color: #ad2debcc;
+    background-color: $color-primario;
     border-radius: 50px;
     line-height: 40px;
     text-align: center;
@@ -365,8 +377,8 @@ body {
 }
 /* SECCION CURRICULUM */
 .curriculum{
-    background-color: #1e2326;
-    color: #fff;
+    background-color: $bg-main;
+    color: $text-light;
     padding: 50px 20px;
 }
 .curriculum .contenido-seccion{
@@ -389,21 +401,21 @@ body {
     padding: 0 20px;
 }
 .curriculum .fila .col h3{
-    color: #ad2debcc;
+    color: $color-primario;
     font-size: 28px;
     font-family: 'Righteous';
     margin-bottom: 25px;
 }
 .curriculum .fila .izquierda{
-    border-right: 2px solid #252A2E;
+    border-right: 2px solid $bg-light;
 }
 .curriculum .fila .derecha{
-    border-left: 2px solid #252A2E;
+    border-left: 2px solid $bg-light;
 }
 .curriculum .fila .item{
     padding: 25px;
     margin-bottom: 30px;
-    background-color: #252A2E;
+    background-color: $bg-light;
     position: relative;
 }
 .curriculum .fila .item h4{
@@ -411,30 +423,30 @@ body {
     margin-bottom: 10px;
 }
 .curriculum .fila .item .casa{
-    color: #ad2debcc;
+    color: $color-primario;
     font-size: 22px;
     font-weight: bold;
     display: block;
 }
 .curriculum .fila .item .fecha{
     display: block;
-    color: #ad2debcc;
+    color: $color-primario;
     margin-bottom: 10px;
 }
 .curriculum .fila .item p{
     line-height: 24px;
 }
 .curriculum .fila .izq{
-    border-right: 2px solid #ad2debcc;
+    border-right: 2px solid $color-primario;
     margin-right: 20px;
 }
 .curriculum .fila .der{
-    border-left: 2px solid #ad2debcc;
+    border-left: 2px solid $color-primario;
     margin-left: 20px;
 }
 .curriculum .fila .item .conectori{
     height: 2px;
-    background-color: #ad2debcc;
+    background-color: $color-primario;
     width: 47px;
     position: absolute;
     top: 50%;
@@ -446,14 +458,14 @@ body {
     height: 10px;
     width: 10px;
     border-radius: 50%;
-    background-color: #ad2debcc;
+    background-color: $color-primario;
     float: right;
     position: relative;
     bottom: 4px;
 }
 .curriculum .fila .item .conectord{
     height: 2px;
-    background-color: #ad2debcc;
+    background-color: $color-primario;
     width: 47px;
     position: absolute;
     top: 50%;
@@ -465,15 +477,15 @@ body {
     height: 10px;
     width: 10px;
     border-radius: 50%;
-    background-color: #ad2debcc;
+    background-color: $color-primario;
     float: left;
     position: relative;
     bottom: 4px;
 }
 /* SECCION PORTFOLIO */
 .portfolio{
-    background-color: #252A2E;
-    color: #fff;
+    background-color: $bg-light;
+    color: $text-light;
     padding: 50px 20px;
 }
 .portfolio .contenido-seccion{
@@ -508,7 +520,7 @@ body {
     width: 100%;
     height: 100%;
     text-align: center;
-    background: linear-gradient(rgba(173, 45, 235, 0.8), rgba(172, 45, 235, 0.767));
+    background: linear-gradient($color-overlay, rgba(172, 45, 235, 0.767));
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -530,8 +542,8 @@ body {
 /* SECCION CONTACTO */
 /* .contacto{
     background-image: url(img/contact_bg.png);
-    background-color: #1e2326;
-    color: #fff;
+    background-color: $bg-main;
+    color: $text-light;
     padding: 50px 0;
 }
 .contacto .contenido-seccion{
@@ -558,20 +570,20 @@ body {
     padding: 18px;
     border: none;
     margin-bottom: 20px;
-    background-color: #252A2E;
-    color: #fff;
+    background-color: $bg-light;
+    color: $text-light;
     font-size: 18px;
 }
 .contacto button{
     cursor: pointer;
     background-color: transparent;
-    border: 2px solid #fff;
+    border: 2px solid $text-light;
     width: fit-content;
     display: block;
     margin: 20px auto;
     padding: 10px 22px;
     font-size: 16px;
-    color: #fff;
+    color: $text-light;
     position: relative;
     z-index: 10;
 }
@@ -581,7 +593,7 @@ body {
     left: 0;
     width: 0;
     height: 100%;
-    background-color: #ad2debcc;
+    background-color: $color-primario;
     z-index: -1;
     transition: 1s;
 }
@@ -594,7 +606,7 @@ body {
 .contacto .col .info{
     position: absolute;
     top: 40%;
-    background-color: #252A2E;
+    background-color: $bg-light;
     padding: 20px;
     max-swidth: 350px;
     left: 50%;
@@ -607,13 +619,13 @@ body {
     margin-bottom: 20px;
 }
 .contacto .col .info ul li i{
-    color: #ad2debcc;
+    color: $color-primario;
     display: inline-block;
     margin-right: 20px;
 }
 footer{
-    background-color: #252A2E;
-    color: #fff;
+    background-color: $bg-light;
+    color: $text-light;
     padding: 50px 0 30px 0;
     text-align: center;
     position: relative;
@@ -623,10 +635,10 @@ footer .redes{
     margin-bottom: 20px;
 }
 footer .redes a{
-    color: #fff;
+    color: $text-light;
     display: inline-block;
     text-decoration: none;
-    border: 1px solid #fff;
+    border: 1px solid $text-light;
     border-radius: 100%;
     width: 42px;
     height: 42px;
@@ -639,8 +651,8 @@ footer .arriba{
     display: block;
     width: 50px;
     height: 50px;
-    background-color: #ad2debcc;
-    color: #fff;
+    background-color: $color-primario;
+    color: $text-light;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -652,8 +664,8 @@ footer .arriba{
  /* SECCION CONTACTO */
 .contacto {
     background-image: url(img/contact_bg.png);
-    background-color: #1e2326;
-    color: #fff;
+    background-color: $bg-main;
+    color: $text-light;
     padding: 50px 0;
 }
 
@@ -689,21 +701,21 @@ footer .arriba{
     padding: 18px;
     border: none;
     margin-bottom: 20px;
-    background-color: #252A2E;
-    color: #fff;
+    background-color: $bg-light;
+    color: $text-light;
     font-size: 18px;
 }
 
 .contacto button {
     cursor: pointer;
     background-color: transparent;
-    border: 2px solid #fff;
+    border: 2px solid $text-light;
     width: fit-content;
     display: block;
     margin: 20px auto; /* Centra el botón */
     padding: 10px 22px;
     font-size: 16px;
-    color: #fff;
+    color: $text-light;
     position: relative;
     z-index: 10;
 }
@@ -714,7 +726,7 @@ footer .arriba{
     left: 0;
     width: 0;
     height: 100%;
-    background-color: #ad2debcc;
+    background-color: $color-primario;
     z-index: -1;
     transition: 1s;
 }
@@ -732,7 +744,7 @@ footer .arriba{
     top: 50%; /* Centra verticalmente */
     left: 50%; /* Centra horizontalmente */
     transform: translate(-50%, -50%); /* Ajusta la posición para centrar */
-    background-color: #252A2E;
+    background-color: $bg-light;
     padding: 20px;
     max-width: 350px; /* Corregido el typo: max-width en lugar de max-swidth */
 }
@@ -746,14 +758,14 @@ footer .arriba{
 }
 
 .contacto .col .info ul li i {
-    color: #ad2debcc;
+    color: $color-primario;
     display: inline-block;
     margin-right: 20px;
 }
 
 footer {
-    background-color: #252A2E;
-    color: #fff;
+    background-color: $bg-light;
+    color: $text-light;
     padding: 50px 0 30px 0;
     text-align: center;
     position: relative;
@@ -765,10 +777,10 @@ footer .redes {
 }
 
 footer .redes a {
-    color: #fff;
+    color: $text-light;
     display: inline-block;
     text-decoration: none;
-    border: 1px solid #fff;
+    border: 1px solid $text-light;
     border-radius: 100%;
     width: 42px;
     height: 42px;
@@ -782,8 +794,8 @@ footer .arriba {
     display: block;
     width: 50px;
     height: 50px;
-    background-color: #ad2debcc;
-    color: #fff;
+    background-color: $color-primario;
+    color: $text-light;
     position: absolute;
     left: 50%; /* Centra horizontalmente */
     transform: translateX(-50%); /* Ajusta para centrar */
@@ -806,14 +818,14 @@ footer .arriba {
         position: absolute;
         right: 0;
         top: 75px;
-        background-color: #252A2E;
+        background-color: $bg-light;
         width: 180px;
     }
     nav.responsive ul{
         display: block !important;
     }
     nav.responsive ul li{
-        border-bottom: 1px solid #fff;
+        border-bottom: 1px solid $text-light;
         padding: 10px 0;
     }
 }
@@ -868,7 +880,7 @@ footer .arriba {
 
 .colortxt {
    padding-bottom: 5%;
-    color: #ad2debcc;
+    color: $color-primario;
     font-weight: bold;
 }
 .hide {
@@ -883,7 +895,7 @@ html {
 
 /* Tipografía y espaciado global */
 p {
-    color: #e0e0e0;
+    color: $text-dim;
     line-height: 1.6;
 }
 
@@ -900,8 +912,8 @@ a, button {
 }
 
 .contenedor-header header nav ul li a:hover {
-    color: #fff;
-    text-shadow: 0 0 8px #ad2debcc;
+    color: $text-light;
+    text-shadow: 0 0 8px $color-primario;
 }
 
 /* Botones principales estilo neón / moderno */
@@ -914,7 +926,7 @@ button {
 }
 
 .sobremi button, .contacto button {
-    border-color: #ad2debcc !important;
+    border-color: $color-primario !important;
 }
 
 /* Tarjetas de intereses interactivos */
@@ -924,8 +936,8 @@ button {
 }
 .contenedor-intereses .interes:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 15px rgba(173, 45, 235, 0.4);
-    border-color: #ad2debcc;
+    box-shadow: 0 8px 15px $color-hover;
+    border-color: $color-primario;
 }
 
 /* Mejoras en el Portfolio (Grid Responsive) */
@@ -966,14 +978,14 @@ button {
 /* Inputs del formato de contacto */
 .contacto .col input, .contacto .col textarea {
     border-radius: 8px;
-    border: 1px solid #333 !important;
+    border: 1px solid $text-color !important;
     transition: all 0.3s ease;
 }
 .contacto .col input:focus, .contacto .col textarea:focus {
     outline: none;
-    border-color: #ad2debcc !important;
+    border-color: $color-primario !important;
     box-shadow: 0 0 10px rgba(173, 45, 235, 0.2);
-    background-color: #1e2326;
+    background-color: $bg-main;
 }
 
 @media screen and (max-width: 700px) {
