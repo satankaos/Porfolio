@@ -23,20 +23,39 @@ document.getElementById('contacto')
  .addEventListener('submit', function(event) {
    event.preventDefault();
 
+   // Cambiar el texto del botón a "Enviando..."
    btn.innerHTML = 'Enviando... <i class="fa-solid fa-paper-plane"></i><span class="overlay"></span>';
 
-   const serviceID = 'default_service';
-   const templateID = 'template_4yueeel';
+   const formData = new FormData(this);
+   const object = Object.fromEntries(formData);
+   const json = JSON.stringify(object);
 
-   emailjs.sendForm(serviceID, templateID, this)
-    .then(() => {
+   fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: {
+         'Content-Type': 'application/json',
+         'Accept': 'application/json'
+      },
+      body: json
+   })
+   .then(async (response) => {
+      let result = await response.json();
+      if (response.status === 200) {
+         alert('¡Mensaje enviado con éxito! Te contactaremos pronto.');
+         this.reset();
+      } else {
+         console.log(result);
+         alert('Error al enviar el mensaje: ' + result.message);
+      }
+   })
+   .catch(error => {
+      console.log(error);
+      alert('Hubo un error de conexión al enviar el mensaje.');
+   })
+   .then(() => {
+      // Restaurar el texto del botón
       btn.innerHTML = 'Enviar Mensaje <i class="fa-solid fa-paper-plane"></i><span class="overlay"></span>';
-      alert('¡Mensaje enviado con éxito!');
-      this.reset();
-    }, (err) => {
-      btn.innerHTML = 'Enviar Mensaje <i class="fa-solid fa-paper-plane"></i><span class="overlay"></span>';
-      alert('Hubo un error al enviar el mensaje: ' + JSON.stringify(err));
-    });
+   });
 });
 
 
